@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
+properties:
+  assertions:
+    - resource: Microsoft.Windows.Developer/OsVersion
+      directives:
+        description: Verify min OS version requirement
+        allowPrerelease: true
+      settings:
+        MinVersion: '10.0.22000'
+  resources:
+    - resource: Microsoft.WinGet.DSC/WinGetPackage
+      id: 7zip
+      directives:
+        description: Install 7Zip from winget
+        allowPrerelease: true
+      settings:
+        id: "7zip.7zip"
+        source: winget
+    - resource: Microsoft.Winget.DSC/WinGetPackage
+      id: OhMyPosh
+      directives:
+        description: Install OhMyPosh
+        allowPrerelease: true
+      settings:
+        id: JanDeDobbeleer.OhMyPosh
+        source: winget
+    - resource: Microsoft.Winget.DSC/WinGetPackage
+      id: WindowsTerminal
+      directives:
+        description: Install Windows Terminal
+        allowPrerelease: true
+      settings:
+        id: Microsoft.WindowsTerminal
+        source: winget
+    - resource: vscode/VSCodeExtension
+      id: VSCode Extension DevBox
+      directives:
+        description: Install the Remote WSL extension for VSCode
+        allowPrerelease: true
+      settings:
+        name: DevCenter.ms-devbox
+  configurationVersion: 0.2.0

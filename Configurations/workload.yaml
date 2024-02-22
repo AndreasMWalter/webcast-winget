@@ -1,0 +1,10 @@
+setupTasks:
+  - task: git-clone
+    description: Clone webcast repositoryinto C:\Dev
+    inputs:
+      repositoryUrl: https://github.com/AndreasMWalter/webcast-winget.git
+      directory: C:\Dev
+  - name: winget
+    description: Apply a winget configuration file that's already present on the machine
+    inputs:
+      configurationFile: 'C:\Dev\webcast-winget\Configurations\winget.yaml'
