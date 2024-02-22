@@ -1,10 +1,12 @@
-setupTasks:
-  - task: git-clone
-    description: Clone webcast repositoryinto C:\Dev
-    inputs:
+$schema: "1.0"
+name: devbox-customization
+tasks:
+  - name: git-clone
+    description: Clone webcast repository into C:\Dev
+    parameters:
       repositoryUrl: https://github.com/AndreasMWalter/webcast-winget.git
       directory: C:\Dev
   - name: winget
     description: Apply a winget configuration file that's already present on the machine
-    inputs:
+    parameters:
       configurationFile: 'C:\Dev\webcast-winget\Configurations\winget.yaml'
