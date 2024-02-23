@@ -7,6 +7,10 @@ tasks:
       repositoryUrl: https://github.com/AndreasMWalter/webcast-winget.git
       directory: C:\Dev
   - name: winget
+    description: Install a package via winget
+    parameters:
+      package: suse.RancherDesktop  
+  - name: winget
     description: Apply a winget configuration file that's already present on the machine
     parameters:
       configurationFile: 'C:\Dev\webcast-winget\Configurations\winget.yaml'
