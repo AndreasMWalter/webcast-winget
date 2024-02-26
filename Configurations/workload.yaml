@@ -11,7 +11,7 @@ tasks:
     parameters:
       configurationFile: 'C:\Dev\webcast-winget\Configurations\system.yaml'
   - name: winget
-    description: Apply a winget configuration file that's already present on the machine
+    description: Apply a winget configuration file that's already present on the machine in user context
     parameters:
       configurationFile: 'C:\Dev\webcast-winget\Configurations\user.yaml'
       runAsUser: true

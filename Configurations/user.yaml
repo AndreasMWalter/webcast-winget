@@ -31,6 +31,4 @@ properties:
         allowPrerelease: true
       settings:
         name: DevCenter.ms-devbox
-      dependsOn:
-        - vscode
   configurationVersion: 0.2.0
