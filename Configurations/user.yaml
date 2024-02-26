@@ -1,4 +1,3 @@
-# yaml-language-server: $schema=https://aka.ms/configuration-dsc-schema/0.2
 properties:
   assertions:
     - resource: Microsoft.Windows.Developer/OsVersion
@@ -7,15 +6,7 @@ properties:
         allowPrerelease: true
       settings:
         MinVersion: '10.0.22000'
-  resources:
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: 7zip
-      directives:
-        description: Install 7Zip from winget
-        allowPrerelease: true
-      settings:
-        id: "7zip.7zip"
-        source: winget
+  resources:    
     - resource: Microsoft.Winget.DSC/WinGetPackage
       id: OhMyPosh
       directives:
@@ -32,15 +23,6 @@ properties:
       settings:
         id: Microsoft.WindowsTerminal
         source: winget
-        UseLatest: true
-    - resource: Microsoft.Winget.DSC/WinGetPackage
-      id: vscode
-      directives:
-        description: Install VSCode
-        allowPrerelease: true
-      settings:
-        id: Microsoft.VisualStudioCode
-        source: winget        
         UseLatest: true
     - resource: vscode/VSCodeExtension
       id: vscodeExtensionDevBox
