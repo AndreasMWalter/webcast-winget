@@ -1,0 +1,4 @@
+  - name: winget
+    description: Install Azure Developer CLI
+    parameters:
+      package: Microsoft.AzureCLI

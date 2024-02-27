@@ -24,11 +24,4 @@ properties:
         id: Microsoft.WindowsTerminal
         source: winget
         UseLatest: true
-    - resource: vscode/VSCodeExtension
-      id: vscodeExtensionDevBox
-      directives:
-        description: Install the Remote WSL extension for VSCode
-        allowPrerelease: true
-      settings:
-        name: DevCenter.ms-devbox
   configurationVersion: 0.2.0
